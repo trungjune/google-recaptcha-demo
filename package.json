@@ -1,0 +1,18 @@
+{
+  "name": "google-recaptcha-demo",
+  "version": "0.1.0",
+  "main": "server.js",
+  "author": "Josef Aidt <josef.aidt@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josefaidt/google-recaptcha-demo"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "express": "^4.16.4"
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>reCAPTCHA Demo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <main>
+    <h1>reCAPTCHA Demo</h1>
+    <form id="defaultform" action="" method="POST">
+      <input type="text" name="firstname" id="form-firstname" placeholder="First Name" required>
+      <input type="text" name="lastname" id="form-lastname" placeholder="Last Name" required>
+      <label for="textarea">Message:</label>
+      <textarea id="form-textarea" maxlength="256" name="message"
+        placeholder="Hello, I would like to verify I'm not a robot." required></textarea>
+      <div class="g-recaptcha" data-sitekey="6Lc_RjIaAAAAAGS7_RFbfOl3gtD0GSZGjYGaXUWT" data-callback="handleGResponse"></div>
+      <br />
+      <input type="submit" value="SUBMIT" id="submit" disabled>
+    </form>
+  </main>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    function handleGResponse(res) {
+      console.log('GOOGLE RESPONSE', res)
+      if (res && typeof res === 'string') {
+        document.querySelector('#submit').toggleAttribute('disabled')
+      }
+    }
+  </script>
+  <iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&k=6Lc2_RsUAAAAAAYBSd4rxsgeQz7whuL9COCsHeET&co=aHR0cHM6Ly9hcHAuaHVic3BvdC5jb206NDQz&hl=vi&v=pRiAUlKgZOMcFLsfzZTeGtOA&size=invisible&badge=inline&cb=1l5d2fmgg5c5" frameborder="0"></iframe>
+</body>
+
+</html>
