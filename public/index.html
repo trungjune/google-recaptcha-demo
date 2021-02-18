@@ -60,3 +60,25 @@ margin: 0px auto;
     overflow: hidden;
     width: 400px;
     height: 580px;
+
+<!DOCTYPE html><html><head><title>HubSpot Form</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><script src="https://www.google.com/recaptcha/api.js?onload=hsRecaptchaLoadCallback&amp;render=explicit"></script></head><script>if (
+  window.location.hostname === 'local.hubspotqa.com' ||
+  window.location.hostname === 'app.hubspotqa.com'
+) {
+  var siteKey = '6LfoMB8UAAAAAAxuC2YUhdgQvIKqJLk7qjX9yvzE';
+} else {
+  var siteKey = '6Lc2_RsUAAAAAAYBSd4rxsgeQz7whuL9COCsHeET';
+}
+window.hsRecaptchaLoadCallback = function() {
+  window.grecaptcha.render(
+    'target',
+    {
+      sitekey: siteKey,
+      callback: function() {},
+    'expired-callback': function() {},
+     'size': 'invisible',
+     'badge': 'inline'
+    },
+    true
+  );
+};</script><body><div id="target"></div></body></html>
